@@ -3,24 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>ひで＆ほなみの結婚式 席次表</title>
+  <title>ひで＆ほなみの結婚式</title>
   <style>
     body {
       font-family: 'Arial', sans-serif;
+      line-height: 1.6;
       padding: 20px;
       background: #fffdf8;
       color: #333;
       max-width: 600px;
       margin: 0 auto;
-      text-align: center;
     }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 28px;
+      color: #d65a5a;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      color: #5a8dd6;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 5px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
     .tables-container {
       display: flex;
-      justify-content: center;
       gap: 20px;
-      flex-wrap: wrap;
+      overflow-x: auto;
+      padding-bottom: 10px;
+      -webkit-overflow-scrolling: touch;
     }
+
     .table {
+      flex: 0 0 auto;
       width: 100px;
       height: 100px;
       border-radius: 50%;
@@ -34,14 +62,15 @@
       user-select: none;
       box-shadow: 0 2px 5px rgba(0,0,0,0.2);
       position: relative;
-      flex-shrink: 0;
     }
+
     .table.active {
       transform: scale(2);
       z-index: 10;
       box-shadow: 0 8px 15px rgba(0,0,0,0.4);
       background: #d65a5a;
     }
+
     .guest-list {
       margin-top: 10px;
       font-size: 14px;
@@ -60,61 +89,100 @@
       color: #333;
       z-index: 20;
     }
+
     .table.active .guest-list {
       display: block;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 14px;
+      color: #aaa;
     }
   </style>
 </head>
 <body>
 
-  <h1>ひで＆ほなみの結婚式 席次表</h1>
+  <header>
+    <h1>Welcome to Our Wedding!</h1>
+    <p>ひで & ほなみ</p>
+  </header>
 
-  <div class="tables-container">
-    <div class="table" id="table1">
-      Table 1
-      <div class="guest-list">
-        <p>・たかし<br>・あやか<br>・まこと<br>・さき<br>・ゆうた</p>
+  <section class="message">
+    <h2>メッセージ</h2>
+    <p>今日はお越しいただきありがとうございます！ゆっくり楽しんでくださいね♡</p>
+  </section>
+
+  <section class="table-map">
+    <h2>席次表</h2>
+    <div class="tables-container">
+      <div class="table" id="table1">
+        Table 1
+        <div class="guest-list">
+          <p>・たかし<br>・あやか<br>・まこと<br>・さき<br>・ゆうた</p>
+        </div>
+      </div>
+      <div class="table" id="table2">
+        Table 2
+        <div class="guest-list">
+          <p>・ゆか<br>・けんじ<br>・みき<br>・しんじ<br>・えり</p>
+        </div>
+      </div>
+      <div class="table" id="table3">
+        Table 3
+        <div class="guest-list">
+          <p>・ゆうこ<br>・だいすけ<br>・さおり<br>・ともや<br>・なおき</p>
+        </div>
+      </div>
+      <div class="table" id="table4">
+        Table 4
+        <div class="guest-list">
+          <p>・みほ<br>・けいた<br>・あきこ<br>・りょう<br>・なおこ</p>
+        </div>
+      </div>
+      <div class="table" id="table5">
+        Table 5
+        <div class="guest-list">
+          <p>・けんた<br>・えみ<br>・しょうた<br>・まゆみ<br>・しんご</p>
+        </div>
       </div>
     </div>
-    <div class="table" id="table2">
-      Table 2
-      <div class="guest-list">
-        <p>・ゆか<br>・けんじ<br>・みき<br>・しんじ<br>・えり</p>
-      </div>
-    </div>
-    <div class="table" id="table3">
-      Table 3
-      <div class="guest-list">
-        <p>・ゆうこ<br>・だいすけ<br>・さおり<br>・ともや<br>・なおき</p>
-      </div>
-    </div>
-    <div class="table" id="table4">
-      Table 4
-      <div class="guest-list">
-        <p>・みほ<br>・けいた<br>・あきこ<br>・りょう<br>・なおこ</p>
-      </div>
-    </div>
-    <div class="table" id="table5">
-      Table 5
-      <div class="guest-list">
-        <p>・けんた<br>・えみ<br>・しょうた<br>・まゆみ<br>・しんご</p>
-      </div>
-    </div>
-  </div>
+  </section>
+
+  <section class="menu">
+    <h2>フードメニュー</h2>
+    <ul>
+      <li>前菜：サーモンのマリネ</li>
+      <li>スープ：かぼちゃのポタージュ</li>
+      <li>メイン：牛フィレのロースト</li>
+      <li>デザート：季節のフルーツタルト</li>
+    </ul>
+  </section>
+
+  <section class="drinks">
+    <h2>ドリンクメニュー</h2>
+    <ul>
+      <li>ビール・ワイン・カクテル</li>
+      <li>ソフトドリンク各種</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Thanks for coming!</p>
+  </footer>
 
   <script>
     const tables = document.querySelectorAll('.table');
     tables.forEach(table => {
       table.addEventListener('click', () => {
-        // 他のテーブルのactive外す
         tables.forEach(t => {
           if(t !== table) t.classList.remove('active');
         });
-        // 自分はtoggleでactive切り替え
         table.classList.toggle('active');
       });
     });
   </script>
-
+  
 </body>
 </html>
