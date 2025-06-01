@@ -2,59 +2,38 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ひで＆ほなみの結婚式</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #fff8f0;
-      color: #333;
-      padding: 20px;
-    }
-    header, section, footer {
-      max-width: 900px; 
-      margin: 0 auto 30px;
-      text-align: center;
-    }
-    h1, h2 {
-      color: #f08a5d;
-    }
-    /* 座席表用スタイル */
-    .seating-container {
+    .seating-chart {
       display: flex;
       flex-wrap: wrap;
+      gap: 20px;
       justify-content: center;
-      gap: 30px;
       margin-top: 20px;
     }
+
     .table {
-      width: 180px;
-      height: 180px;
+      width: 120px;
+      height: 120px;
+      border: 2px solid #ccc;
       border-radius: 50%;
-      border: 3px solid #f08a5d;
-      background: #fff;
-      box-shadow: 0 4px 8px rgba(240, 138, 93, 0.3);
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 15px;
-      box-sizing: border-box;
+      background-color: #fffaf5;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
     }
-    .table-title {
+
+    .table-number {
       font-weight: bold;
-      margin-bottom: 10px;
-      font-size: 18px;
+      margin-bottom: 5px;
     }
-    .guest-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      text-align: center;
-      font-size: 14px;
-    }
-    .guest-list li {
-      margin: 4px 0;
+
+    .guest-name {
+      font-size: 12px;
     }
   </style>
 </head>
@@ -71,108 +50,88 @@
 
   <section class="table-map">
     <h2>席次表</h2>
-    <img src="sekijihyo.png" alt="席次表" />
-
-    <div class="seating-container">
+    <div class="seating-chart">
+      <!-- テーブル10個 -->
+      <!-- 適当な名前で表示 -->
       <div class="table">
-        <div class="table-title">Table 1</div>
-        <ul class="guest-list">
-          <li>さとし</li>
-          <li>えみ</li>
-          <li>たかし</li>
-          <li>あやか</li>
-          <li>りょう</li>
-        </ul>
+        <div class="table-number">Table 1</div>
+        <div class="guest-name">さくら</div>
+        <div class="guest-name">けんた</div>
+        <div class="guest-name">ゆうこ</div>
+        <div class="guest-name">まさる</div>
+        <div class="guest-name">あい</div>
       </div>
       <div class="table">
-        <div class="table-title">Table 2</div>
-        <ul class="guest-list">
-          <li>けんじ</li>
-          <li>みさき</li>
-          <li>ゆうた</li>
-          <li>まい</li>
-          <li>けいすけ</li>
-        </ul>
+        <div class="table-number">Table 2</div>
+        <div class="guest-name">だいち</div>
+        <div class="guest-name">りな</div>
+        <div class="guest-name">たくみ</div>
+        <div class="guest-name">みほ</div>
+        <div class="guest-name">なおと</div>
       </div>
       <div class="table">
-        <div class="table-title">Table 3</div>
-        <ul class="guest-list">
-          <li>りな</li>
-          <li>しんじ</li>
-          <li>あきこ</li>
-          <li>たくみ</li>
-          <li>ゆか</li>
-        </ul>
+        <div class="table-number">Table 3</div>
+        <div class="guest-name">まゆ</div>
+        <div class="guest-name">しゅん</div>
+        <div class="guest-name">かおる</div>
+        <div class="guest-name">あや</div>
+        <div class="guest-name">たかし</div>
       </div>
       <div class="table">
-        <div class="table-title">Table 4</div>
-        <ul class="guest-list">
-          <li>けんた</li>
-          <li>なおみ</li>
-          <li>ひろし</li>
-          <li>あい</li>
-          <li>ゆうこ</li>
-        </ul>
+        <div class="table-number">Table 4</div>
+        <div class="guest-name">みく</div>
+        <div class="guest-name">けい</div>
+        <div class="guest-name">さとる</div>
+        <div class="guest-name">まな</div>
+        <div class="guest-name">こうじ</div>
       </div>
       <div class="table">
-        <div class="table-title">Table 5</div>
-        <ul class="guest-list">
-          <li>ゆうじ</li>
-          <li>まなみ</li>
-          <li>こうじ</li>
-          <li>さやか</li>
-          <li>りょうた</li>
-        </ul>
+        <div class="table-number">Table 5</div>
+        <div class="guest-name">なつき</div>
+        <div class="guest-name">ゆうや</div>
+        <div class="guest-name">りこ</div>
+        <div class="guest-name">けいご</div>
+        <div class="guest-name">ひとみ</div>
       </div>
       <div class="table">
-        <div class="table-title">Table 6</div>
-        <ul class="guest-list">
-          <li>なおや</li>
-          <li>あや</li>
-          <li>けいた</li>
-          <li>まゆ</li>
-          <li>たけし</li>
-        </ul>
+        <div class="table-number">Table 6</div>
+        <div class="guest-name">ひで</div>
+        <div class="guest-name">ほなみ</div>
+        <div class="guest-name">けんじ</div>
+        <div class="guest-name">かなこ</div>
+        <div class="guest-name">しん</div>
       </div>
       <div class="table">
-        <div class="table-title">Table 7</div>
-        <ul class="guest-list">
-          <li>ゆかり</li>
-          <li>しゅん</li>
-          <li>えり</li>
-          <li>そうた</li>
-          <li>みほ</li>
-        </ul>
+        <div class="table-number">Table 7</div>
+        <div class="guest-name">あやか</div>
+        <div class="guest-name">りょう</div>
+        <div class="guest-name">ちさと</div>
+        <div class="guest-name">けいた</div>
+        <div class="guest-name">まこと</div>
       </div>
       <div class="table">
-        <div class="table-title">Table 8</div>
-        <ul class="guest-list">
-          <li>まさし</li>
-          <li>あかね</li>
-          <li>けんいち</li>
-          <li>なおこ</li>
-          <li>ゆうき</li>
-        </ul>
+        <div class="table-number">Table 8</div>
+        <div class="guest-name">しのぶ</div>
+        <div class="guest-name">りゅうじ</div>
+        <div class="guest-name">みさき</div>
+        <div class="guest-name">ゆき</div>
+        <div class="guest-name">としお</div>
       </div>
       <div class="table">
-        <div class="table-title">Table 9</div>
-        <ul class="guest-list">
-          <li>ひろき</li>
-          <li>さちこ</li>
-          <li>たくや</li>
-          <li>あすか</li>
-          <li>だいき</li>
-        </ul>
+        <div class="table-number">Table 9</div>
+        <div class="guest-name">なおみ</div>
+        <div class="guest-name">かずや</div>
+        <div class="guest-name">えり</div>
+        <div class="guest-name">たつや</div>
+        <div class="guest-name">ゆり</div>
       </div>
       <div class="table">
-        <div class="table-title">Table 10</div>
-        <ul class="guest-list">
-          <li>まいこ</li>
-          <li>けんたろう</li>
-          <li>あやな</li>
-          <li>ゆうへい</li>
-          <li>みさと</li>
-        </ul>
+        <div class="table-number">Table 10</div>
+        <div class="guest-name">ともこ</div>
+        <div class="guest-name">こうへい</div>
+        <div class="guest-name">れな</div>
+        <div class="guest-name">しゅう</div>
+        <div class="guest-name">なな</div>
       </div>
     </div>
   </section>
